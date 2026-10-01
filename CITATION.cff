@@ -3,7 +3,7 @@ message: >-
   If you use this software, please cite both the software itself and the
   accompanying paper.
 title: >-
-  Unfitted HHO for elastodynamics with an imperfect interface: verification and
+  v1.0.0 Reproduction bundle for "An Unfitted Hybrid High-Order Method for the Elastodynamics Problem with Imperfect Interface" 
   reproduction code
 abstract: >-
   Python implementation of the unfitted hybrid high-order (HHO) method for the
