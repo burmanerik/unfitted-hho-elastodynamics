@@ -40,7 +40,7 @@ A `Makefile` wraps the same commands (`make figures`, `make test`, `make all`).
 
 ## Requirements
 
-Python 3.9 or later with NumPy, SciPy, SymPy and Matplotlib; `pytest` for the
+Python 3.10 or later with NumPy, SciPy, SymPy and Matplotlib; `pytest` for the
 test suite. The exact versions used for the shipped results are pinned in
 `requirements.txt` (Python 3.11, NumPy 2.4, SciPy 1.17, SymPy 1.14,
 Matplotlib 3.10). Nothing is compiled and there are no other dependencies.
@@ -192,6 +192,11 @@ with homogeneous boundary data. With the time-dependent Dirichlet data of test
 case 1 the stages suffer the usual order reduction and only order ≈ 2.4 is
 observed for SDIRK(2,3) and SDIRK(3,4); this is a property of the test, not of
 the implementation.
+
+## Publishing
+
+`RELEASING.md` walks through putting this repository on GitHub and archiving it
+on Zenodo to obtain a DOI the paper can cite.
 
 ## Licence and citation
 
