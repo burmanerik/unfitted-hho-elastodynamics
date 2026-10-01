@@ -328,11 +328,11 @@ def stage_timestep():
 # name -> (function, prerequisite stages, approximate single-core runtime,
 #          what it feeds in the manuscript)
 STAGES = {
-    'conv':     (stage_conv,     (),         '14 min',
+    'conv':     (stage_conv,     (),         '3 min',
                  'Tables 1, 2, 4 and Figure 3'),
-    'dyn':      (stage_dyn,      (),         '17 min',
+    'dyn':      (stage_dyn,      (),         '1 min',
                  'Tables 5 and 6'),
-    'smallcut': (stage_smallcut, (),         '3 min',
+    'smallcut': (stage_smallcut, (),         '30 s',
                  'Table 3'),
     'case2':    (stage_case2,    (),         '30 min',
                  'Table 7 and Figures 4, 5'),

@@ -96,12 +96,15 @@ Single core of an x86-64 cloud VM, Python 3.11:
 
 | stage | runtime | memory | produces |
 |---|---|---|---|
-| `conv` | ~14 min | < 1 GB | Tables 1, 2, 4 and Figure 3 |
-| `dyn` | ~17 min | < 1 GB | Tables 5 and 6 |
-| `smallcut` | ~3 min | < 1 GB | Table 3 |
-| `case2` | ~30 min | 5.7 GB | Table 7 and Figures 4, 5 |
-| `case3` | ~62 min | 5.7 GB | Table 10 and Figures 7, 8 |
-| `timestep` | ~6 min | < 1 GB | Tables 8, 9 and Figure 6 (needs `case2` first) |
+| `conv` | 3 min | < 1 GB | Tables 1, 2, 4 and Figure 3 |
+| `dyn` | 1 min | < 1 GB | Tables 5 and 6 |
+| `smallcut` | 30 s | < 1 GB | Table 3 |
+| `case2` | 30 min | 5.7 GB | Table 7 and Figures 4, 5 |
+| `case3` | ~60 min | 5.7 GB | Table 10 and Figures 7, 8 |
+| `timestep` | 6 min | < 1 GB | Tables 8, 9 and Figure 6 (needs `case2` first) |
+
+Of the 30 minutes of `case2`, 13 go into the `k = 4`, `n = 64` reference
+solution and 8 into the finest run of the table itself.
 
 `timestep` measures its errors against the reference solution computed by
 `case2`, so that stage must have been run before (or in the same invocation).
@@ -170,6 +173,19 @@ The suite checks the method rather than the plumbing:
 * `test_static_convergence.py` — the rates *h*<sup>*k*+1</sup> and *h*<sup>*k*+2</sup> of Theorems 5.6 and 5.9, without an interface, with a cut mesh and a continuous solution, and with the slip interface;
 * `test_time_integration.py` — the space rates of the Newmark scheme, the temporal orders 2, 3 and 4 of Newmark, SDIRK(2,3) and SDIRK(3,4), exact energy conservation by Newmark and monotone energy decay by SDIRK;
 * `test_robustness.py` — the errors stay at the same level over sixteen orders of magnitude of compliancy; the condition number blows up as the cut shrinks without agglomeration and stays bounded with it.
+
+### Determinism
+
+The computations are deterministic: recomputing a stage reproduces the shipped
+JSON files byte for byte. This was checked for the stages `conv`, `dyn`,
+`smallcut` and `case2` — the last being the one the sensor errors of Table 7
+come from — by deleting `results/` and running them again from a clean copy of
+the repository. The one exception is the condition numbers of
+`t4_agglo.json` and `t9_smallcut.json`, which come from a sparse eigenvalue
+solve (`scipy.sparse.linalg.eigsh` with a randomised start and a tolerance of
+1e-4) and move by about 1e-5 in relative terms from one run to the next. They
+are reported in the paper with two significant digits, so this is invisible in
+Table 3.
 
 The temporal orders of the Runge–Kutta schemes are measured on test case 2,
 with homogeneous boundary data. With the time-dependent Dirichlet data of test
