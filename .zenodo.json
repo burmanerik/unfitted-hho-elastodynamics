@@ -2,7 +2,7 @@
   "title": "Unfitted HHO for elastodynamics with an imperfect interface: verification and reproduction code",
   "description": "<p>Python implementation of the unfitted hybrid high-order (HHO) method for the elastic wave equation in a medium made of two components separated by an imperfect interface of linear slip type, together with the drivers that reproduce every table and figure of the accompanying paper by P. Huang and E. Burman.</p><p>The code is self-contained (NumPy, SciPy, SymPy, Matplotlib): exact polygon clipping for the cut geometry, hierarchical orthonormal bases on cut subcells and subfaces, a simplified two-stage cell agglomeration, the local strain reconstruction incorporating the interface condition, and Newmark and SDIRK(s,s+1) time stepping. The raw results of the production runs are included, so the tables and figures can be rebuilt in seconds without repeating the computations.</p>",
   "upload_type": "software",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "version": "1.0.0",
   "language": "eng",
   "creators": [

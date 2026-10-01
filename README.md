@@ -200,7 +200,7 @@ on Zenodo to obtain a DOI the paper can cite.
 
 ## Licence and citation
 
-The code is released under the MIT licence (see `LICENSE`). If you use it,
+The code is released under the BSD 3-Clause licence (see `LICENSE`). If you use it,
 please cite the paper and, if you wish to refer to this exact version, the
 archived release; `CITATION.cff` carries the metadata.
 

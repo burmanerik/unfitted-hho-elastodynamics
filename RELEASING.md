@@ -68,7 +68,7 @@ gh repo create <user>/unfitted-hho-elastodynamics --public --source=. --push \
 ```
 
 Check on the repository page that the README renders, that GitHub has detected
-the MIT licence in the sidebar, and that a *Cite this repository* button has
+the BSD 3-Clause licence in the sidebar, and that a *Cite this repository* button has
 appeared — that button is GitHub reading `CITATION.cff`, and it failing to
 appear means the file has a syntax error.
 
@@ -156,7 +156,7 @@ Fix the cause, then publish a `v1.0.1` release — Zenodo will archive that one.
 
 If you would rather not use GitHub at all, upload the zip directly:
 <https://zenodo.org/uploads/new> → drag the archive in → *Upload type:
-Software* → fill in title, authors, affiliations, ORCIDs, licence (MIT),
+Software* → fill in title, authors, affiliations, ORCIDs, licence (BSD 3-Clause),
 keywords → *Publish*. The DOI is minted on publication.
 
 In a draft you can also press *Reserve DOI* to obtain the identifier before
