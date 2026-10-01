@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite both the software itself and the
+  accompanying paper.
+title: >-
+  Unfitted HHO for elastodynamics with an imperfect interface: verification and
+  reproduction code
+abstract: >-
+  Python implementation of the unfitted hybrid high-order (HHO) method for the
+  elastic wave equation across a linear slip interface, together with the
+  drivers that reproduce every table and figure of the accompanying paper.
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Huang
+    given-names: Peiqi
+    affiliation: >-
+      Department of Applied Mathematics, Nanjing Forestry University, Nanjing
+      210037, People's Republic of China
+    email: pqhuang@njfu.edu.cn
+  - family-names: Burman
+    given-names: Erik
+    affiliation: >-
+      Department of Mathematics, University College London, Gower Street,
+      London WC1E 6BT, United Kingdom
+    email: e.burman@ucl.ac.uk
+keywords:
+  - hybrid high-order methods
+  - unfitted finite elements
+  - cell agglomeration
+  - elastodynamics
+  - imperfect interface
+  - linear slip interface
+references:
+  - type: article
+    title: >-
+      An unfitted hybrid high-order method for the elastodynamics problem with
+      imperfect interface
+    authors:
+      - family-names: Huang
+        given-names: Peiqi
+      - family-names: Burman
+        given-names: Erik
+    year: 2026

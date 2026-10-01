@@ -1,0 +1,10 @@
+# Versions used for the runs shipped in results/ (Python 3.11).
+# Any reasonably recent release of these four packages will do; the code uses
+# no feature newer than NumPy 1.22.
+numpy==2.4.4
+scipy==1.17.1
+sympy==1.14.0
+matplotlib==3.10.9
+
+# optional, for the test suite
+pytest==9.1.1
