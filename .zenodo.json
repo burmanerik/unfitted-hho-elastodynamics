@@ -2,7 +2,7 @@
   "title": "Reproduction bundle for \"An Unfitted Hybrid High-Order Method for the Elastodynamics Problem with Imperfect Interface\"",
   "description": "<p>Python implementation of the unfitted hybrid high-order (HHO) method for the elastic wave equation in a medium made of two components separated by an imperfect interface of linear slip type, together with the drivers that reproduce every table and figure of the accompanying paper by P. Huang and E. Burman.</p><p>The code is self-contained (NumPy, SciPy, SymPy, Matplotlib): exact polygon clipping for the cut geometry, hierarchical orthonormal bases on cut subcells and subfaces, a simplified two-stage cell agglomeration, the local strain reconstruction incorporating the interface condition, and Newmark and SDIRK(s,s+1) time stepping. The raw results of the production runs are included, so the tables and figures can be rebuilt in seconds without repeating the computations.</p>",
   "upload_type": "software",
-  "license": "BSD-3-Clause",
+  "license": "bsd-3-clause",
   "version": "1.0.0",
   "language": "eng",
   "creators": [
@@ -26,13 +26,5 @@
     "error estimates",
     "reproducible research"
   ],
-  "grants": [
-    {
-      "id": "10.13039/501100000266::EP/P01576X/1"
-    },
-    {
-      "id": "10.13039/501100000266::EP/V050400/1"
-    }
-  ],
-  "notes": "Also supported by the National Natural Science Foundation of China grant 11301267 and the Natural Science Foundation of Jiangsu Province grant BK20191386."
+  "notes": "Supported by the National Natural Science Foundation of China grant 11301267, the Natural Science Foundation of Jiangsu Province grant BK20191386, and EPSRC grants EP/P01576X/1 and EP/V050400/1."
 }
